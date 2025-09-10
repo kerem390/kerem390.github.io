@@ -1,66 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kerem Bişkin — Software & Data Solutions</title>
-  <meta name="description" content="Excel & Google Sheets help, Python automations, SQL queries, and C programming support. Fast, reliable, and client-focused." />
+  <title>Kerem Bişkin — Software/Web Developer</title>
+  <meta name="description" content="Kerem Bişkin — Software & Web Developer in Berlin. Python, C, SQL, HTML/CSS/JS, automations and data solutions." />
+
+  <!-- Minimal reset + dark theme -->
   <style>
     :root{
-      --bg:#0f1220;
-      --card:#14182a;
-      --text:#e8ecf1;
-      --muted:#b8c1d1;
-      --accent:#6fd3ff;
-      --accent2:#8fffca;
-      --radius:18px;
-      --shadow:0 10px 30px rgba(0,0,0,.25);
-      --max:1100px;
+      --bg:#0f172a;         /* slate-900 */
+      --bg-soft:#0b1224;    /* slightly darker */
+      --card:#111827;       /* gray-900 */
+      --muted:#94a3b8;      /* slate-400 */
+      --text:#e5e7eb;       /* gray-200 */
+      --accent:#38bdf8;     /* sky-400 */
+      --chip:#1e293b;       /* slate-800 */
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{opacity:.9}
-    header{padding:64px 20px 36px;border-bottom:1px solid rgba(255,255,255,.06);background:linear-gradient(180deg,rgba(255,255,255,.04),transparent)}
-    .wrap{max-width:var(--max);margin:0 auto}
-    .hero{display:flex;gap:28px;align-items:center;flex-wrap:wrap;justify-content:space-between}
-    .hero h1{margin:0;font-size:40px;line-height:1.1}
-    .hero p{margin:8px 0 0;color:var(--muted);max-width:650px}
-    .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
-    .btn{padding:12px 18px;border-radius:12px;background:var(--accent);color:#041017;font-weight:600;box-shadow:var(--shadow)}
-    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,.14);color:var(--text)}
-    section{padding:28px 20px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr} .hero h1{font-size:32px}}
-    .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:var(--shadow)}
-    h2{margin:0 0 14px;font-size:24px}
-    ul{margin:0;padding-left:18px}
-    footer{padding:36px 20px;border-top:1px solid rgba(255,255,255,.06);color:var(--muted)}
-    .tag{display:inline-block;padding:4px 10px;border:1px solid rgba(255,255,255,.14);border-radius:999px;margin:6px 8px 0 0;color:var(--muted);font-size:13px}
-    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;}
+    html,body{margin:0;background:linear-gradient(180deg, var(--bg), var(--bg-soft));color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:auto;padding:24px}
+    .center{text-align:center}
+    .btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:700}
+    .btn-primary{background:var(--accent);color:#07263a}
+    .btn-ghost{background:var(--chip);border:1px solid #243244}
+    .chip{display:inline-block;background:var(--chip);padding:6px 12px;border-radius:999px;margin:6px 6px 0 0;font-size:.9rem}
+    .card{background:rgba(17,24,39,.7);border:1px solid #1f2937;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .grid{display:grid;gap:18px}
+    @media(min-width:900px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+    h1{font-size:3rem;margin:12px 0 4px}
+    h2{font-size:1.9rem;margin:0 0 14px}
+    p{line-height:1.7;color:var(--text)}
+    /* HERO */
+    #hero{padding:70px 0 30px}
+    #hero img{width:180px;height:180px;object-fit:cover;border-radius:50%;border:4px solid var(--accent);box-shadow:var(--shadow)}
+    #hero .actions{margin-top:18px}
+    /* ABOUT */
+    #about{padding:50px 0}
+    .about-wrap{display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+    .about-photo{flex:0 0 220px;text-align:center}
+    .about-photo img{width:220px;height:220px;object-fit:cover;border-radius:50%;border:4px solid var(--accent);box-shadow:var(--shadow)}
+    .about-text{flex:1;min-width:280px}
+    /* SERVICES */
+    #services{padding:30px 0 70px}
+    .card h3{margin:0 0 12px}
+    .muted{color:var(--muted)}
+    footer{border-top:1px solid #1f2937;padding:26px 0;color:var(--muted);text-align:center}
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap hero">
-      <div>
-        <h1>Kerem Bişkin</h1>
-        <p>Software & Data Solutions — Excel & Google Sheets help, Python automations, SQL queries, and C programming support. Fast, reliable, and client-focused.</p>
-        <div class="cta">
-          <a class="btn" href="mailto:kerembiskin@hotmail.com">Email Me</a>
-          <a class="btn secondary" href="https://www.fiverr.com/" target="_blank" rel="noopener">Fiverr Profile</a>
+
+  <!-- HERO (photo moved to top, no long tagline) -->
+  <section id="hero">
+    <div class="container center">
+      <img src="assets/profile.jpg" alt="Portrait of Kerem Bişkin" />
+      <h1>Kerem Bişkin</h1>
+      <p class="muted">Software & Web Developer · Berlin</p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:kerembiskin@hotmail.com">Email Me</a>
+        <a class="btn btn-ghost" href="https://www.fiverr.com/" target="_blank" rel="noopener">Fiverr Profile</a>
+      </div>
+
+      <div style="margin-top:18px">
+        <span class="chip">Python</span>
+        <span class="chip">C</span>
+        <span class="chip">SQL</span>
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">Automations</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT (student ama yetkin/pro görünüm) -->
+  <section id="about">
+    <div class="container">
+      <div class="about-wrap">
+        <div class="about-photo">
+          <img src="assets/profile.jpg" alt="Kerem Bişkin — profile" />
         </div>
-        <div style="margin-top:10px;">
-          <span class="tag">Excel</span><span class="tag">Google Sheets</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">C</span><span class="tag">Automation</span>
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            Hi, I’m <strong>Kerem Bişkin</strong>, a Software & Web Developer based in Berlin.
+            I’m currently studying <strong>Computer Science</strong> at
+            <strong>Freie Universität Berlin</strong>, where I’ve built a solid foundation in
+            <strong>software engineering, algorithms, databases, and security</strong>.
+          </p>
+          <p>
+            I’m <strong>proficient in Python, C, SQL, and modern web technologies (HTML, CSS, JavaScript)</strong>,
+            with hands-on experience across <strong>frontend</strong> and <strong>backend</strong>.
+            I enjoy solving real problems and shipping clean, reliable, and user-friendly solutions.
+          </p>
         </div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <section>
-    <div class="wrap">
-      <h2>Services</h2>
-      <div class="grid">
+  <!-- SERVICES (senin mevcut kart yapına uygun, kısa) -->
+  <section id="services">
+    <div class="container">
+      <h2 class="center">Services</h2>
+      <div class="grid grid-3" style="margin-top:18px">
         <div class="card">
           <h3>Data Cleaning</h3>
           <ul>
@@ -89,23 +135,13 @@
     </div>
   </section>
 
-  <section>
-    <div class="wrap">
-      <h2>About</h2>
-      <p>I’m a Computer Science student at Freie Universität Berlin. I focus on practical, time-saving solutions for small businesses and students. Clear communication (EN/DE/TR), clean deliverables, and 7‑day quick support for small fixes.</p>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <h2>Contact</h2>
-      <p>Email: <a class="mono" href="mailto:kerembiskin@hotmail.com">kerembiskin@hotmail.com</a></p>
-      <p>Website: <span class="mono">kerembiskin.com</span></p>
-    </div>
-  </section>
-
   <footer>
-    <div class="wrap">© 2025 Kerem Bişkin — Built with simple HTML & CSS.</div>
+    © <span id="y"></span> Kerem Bişkin · Berlin
   </footer>
+
+  <script>
+    // Yılı otomatik güncelle
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
