@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="preload" as="image" href="assets/profile.jpg" fetchpriority="high">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kerem Bişkin — Software/Web Developer</title>
   <meta name="description" content="Kerem Bişkin — Software & Web Developer in Berlin. Python, C, SQL, HTML/CSS/JS, automations and data solutions." />
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="assets/profile.jpg.jpeg" fetchpriority="high">
 
   <!-- Minimal reset + dark theme -->
   <style>
@@ -57,7 +59,11 @@
   <!-- HERO (photo moved to top, no long tagline) -->
   <section id="hero">
     <div class="container center">
-      <img src="assets/profile.jpg.jpeg" alt="Portrait of Kerem Bişkin" width="180" height="180">
+      <img
+        src="assets/profile.jpg.jpeg"
+        alt="Portrait of Kerem Bişkin"
+        width="180" height="180"
+        decoding="async" fetchpriority="high">
       <h1>Kerem Bişkin</h1>
       <p class="muted">Software & Web Developer · Berlin</p>
 
@@ -83,8 +89,11 @@
     <div class="container">
       <div class="about-wrap">
         <div class="about-photo">
-          <img src="assets/profile.jpg.jpeg" alt="Kerem Bişkin — profile" width="220" height="220" loading="lazy" decoding="async">
-
+          <img
+            src="assets/profile.jpg.jpeg"
+            alt="Kerem Bişkin — profile"
+            width="220" height="220"
+            loading="lazy" decoding="async">
         </div>
         <div class="about-text">
           <h2>About Me</h2>
@@ -104,7 +113,7 @@
     </div>
   </section>
 
-  <!-- SERVICES (senin mevcut kart yapına uygun, kısa) -->
+  <!-- SERVICES -->
   <section id="services">
     <div class="container">
       <h2 class="center">Services</h2>
