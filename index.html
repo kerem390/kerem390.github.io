@@ -23,7 +23,12 @@
       --shadow:0 10px 30px rgba(0,0,0,.35);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;background:linear-gradient(180deg, var(--bg), var(--bg-soft));color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+    html,body{
+      margin:0;
+      background:linear-gradient(180deg, var(--bg), var(--bg-soft));
+      color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif
+    }
     a{color:inherit;text-decoration:none}
     .container{max-width:1100px;margin:auto;padding:24px}
     .center{text-align:center}
@@ -41,12 +46,6 @@
     #hero{padding:70px 0 0px}
     #hero img{width:180px;height:180px;object-fit:cover;border-radius:50%;border:4px solid var(--accent);box-shadow:var(--shadow)}
     #hero .actions{margin-top:18px}
-    /* ABOUT */
-    #about{padding:10px 0}
-    .about-wrap{display:flex;gap:40px;align-items:center;flex-wrap:wrap}
-    .about-photo{flex:0 0 220px;text-align:center}
-    .about-photo img{width:220px;height:220px;object-fit:cover;border-radius:50%;border:4px solid var(--accent);box-shadow:var(--shadow)}
-    .about-text{flex:1;min-width:280px}
     /* SERVICES */
     #services{padding:30px 0 70px}
     .card h3{margin:0 0 12px}
@@ -56,7 +55,7 @@
 </head>
 <body>
 
-  <!-- HERO (photo moved to top, no long tagline) -->
+  <!-- HERO -->
   <section id="hero">
     <div class="container center">
       <img
@@ -83,20 +82,6 @@
         <span class="chip">JavaScript</span>
       </div>
     </div>
-  </section>
-
-  <!-- ABOUT (student ama yetkin/pro görünüm) -->
-  <section id="about">
-    <div class="container">
-      <div class="about-wrap">
-  <div class="about-text">
-    <p>
-      I’m <strong>proficient in Python, C, SQL, and modern web technologies (HTML, CSS, JavaScript)</strong>,
-      with hands-on experience across <strong>frontend</strong> and <strong>backend</strong>.
-      I enjoy solving real problems and shipping clean, reliable, and user-friendly solutions.
-    </p>
-  </div>
-</div>
   </section>
 
   <!-- SERVICES -->
@@ -134,47 +119,47 @@
 
   <!-- PROJECTS -->
   <section id="projects">
-  <div class="container">
-    <h2 class="center">Projects</h2>
-    <div class="grid grid-3" style="margin-top:18px">
-      <div class="card">
-        <h3>CSV Cleaner</h3>
-        <p class="muted">Bozuk CSV’leri tek tıkla temizleyen küçük bir Python aracı. Duplicate, boş satır, tip hatası düzeltir.</p>
-        <p><strong>Stack:</strong> Python, Pandas</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Live</a>
-          <a class="btn btn-ghost" href="https://github.com/kerem390/CSV-Cleaner" target="_blank" rel="noopener">GitHub</a>
+    <div class="container">
+      <h2 class="center">Projects</h2>
+      <div class="grid grid-3" style="margin-top:18px">
+        <div class="card">
+          <h3>CSV Cleaner</h3>
+          <p class="muted">Bozuk CSV’leri tek tıkla temizleyen küçük bir Python aracı. Duplicate, boş satır, tip hatası düzeltir.</p>
+          <p><strong>Stack:</strong> Python, Pandas</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Live</a>
+            <a class="btn btn-ghost" href="https://github.com/kerem390/CSV-Cleaner" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Mini SQL Reports</h3>
+          <p class="muted">Küçük işletme satış verilerinden haftalık rapor üreten SQL sorgu seti + HTML çıktısı.</p>
+          <p><strong>Stack:</strong> SQL, SQLite, HTML</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Live</a>
+            <a class="btn btn-ghost" href="https://github.com/kerem390/mini-sql-reports" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Portfolio Site</h3>
+          <p class="muted">Bu sitenin kaynak kodu; responsive layout, hızlı yükleme, basit tasarım.</p>
+          <p><strong>Stack:</strong> HTML, CSS, JS</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://kerembiskin.com" target="_blank" rel="noopener">Live</a>
+            <a class="btn btn-ghost" href="https://github.com/kerem390/kerem390.github.io" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
       </div>
 
-      <div class="card">
-        <h3>Mini SQL Reports</h3>
-        <p class="muted">Küçük işletme satış verilerinden haftalık rapor üreten SQL sorgu seti + HTML çıktısı.</p>
-        <p><strong>Stack:</strong> SQL, SQLite, HTML</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Live</a>
-          <a class="btn btn-ghost" href="https://github.com/kerem390/mini-sql-reports" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Portfolio Site</h3>
-        <p class="muted">Bu sitenin kaynak kodu; responsive layout, hızlı yükleme, basit tasarım.</p>
-        <p><strong>Stack:</strong> HTML, CSS, JS</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="https://kerembiskin.com" target="_blank" rel="noopener">Live</a>
-          <a class="btn btn-ghost" href="https://github.com/kerem390/kerem390.github.io" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
+      <p class="center" style="margin-top:14px">
+        <a class="btn btn-ghost" href="https://github.com/kerem390?tab=repositories" target="_blank" rel="noopener">
+          More on GitHub
+        </a>
+      </p>
     </div>
-
-    <p class="center" style="margin-top:14px">
-      <a class="btn btn-ghost" href="https://github.com/kerem390?tab=repositories" target="_blank" rel="noopener">
-        More on GitHub
-      </a>
-    </p>
-  </div>
-</section>
+  </section>
 
   <footer>
     © <span id="y"></span> Kerem Bişkin · Berlin
